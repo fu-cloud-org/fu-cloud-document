@@ -1,4 +1,4 @@
-# 1.bms-billboard-controller/billboard/show-api
+# bms-billboard-controller/billboard/show-api
 #### 接口简介
 &emsp;&emsp;展示
 
