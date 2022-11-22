@@ -23,7 +23,7 @@ bms-comment-controller/comment/create-api
 |  字段   | 说明 | 类型 | 备注 | 
 |  ----   | ----  | ---- | ---- |
 | code  | 接口状态码 | Number | 成功：200 | 
-| message  | 接口信息 | String |  |
+| message  | 接口信息 | String |成功：操作成功  |
 | data | 返回数据 |Object| |
 
 #### data
