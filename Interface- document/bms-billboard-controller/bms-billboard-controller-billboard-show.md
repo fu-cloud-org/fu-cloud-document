@@ -26,4 +26,4 @@
 |show|是否展示成功|Boolean|成功：true
 
 #### 响应实例：
-<div align=center><img  src="1-1.png"/></div>
+![1-1.png](image/1-1.png)
