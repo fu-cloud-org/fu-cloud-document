@@ -1,4 +1,4 @@
-# 2.bms-comment-controller/comment/commentLists-api
+# bms-comment-controller/comment/commentLists-api
 #### 接口简介
 &emsp;&emsp;根据贴子的id获取评论
 
