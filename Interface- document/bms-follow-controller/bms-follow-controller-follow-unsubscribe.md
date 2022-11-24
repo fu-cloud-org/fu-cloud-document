@@ -1,4 +1,4 @@
-# 5.bms-follow-controller/follow/unsubscribe/{userId}-api
+# bms-follow-controller/follow/unsubscribe/{userId}-api
 #### 接口简介
 &emsp;&emsp;取消关注操作
 
