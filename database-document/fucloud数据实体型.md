@@ -102,3 +102,6 @@
 | role_id | int | 用户角色 |
 | create_time |  datetime | 加入时间 |
 | modify_time |  datetime | 修改时间 |
+| sign | varchar(255) | 签名 |
+| sex | smallint | 性别 | 
+| regional | varchar(255) | 地区 |
