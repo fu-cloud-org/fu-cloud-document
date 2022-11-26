@@ -26,4 +26,4 @@
 |description|推广内容描述|String||
 
 #### 响应实例：
-![](5-1.png)
+![](image/5-1.png)
