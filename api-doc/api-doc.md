@@ -87,6 +87,31 @@
 
 
 
+## 3.3	delete
+
+> DELETE  /comment/delete/{id}
+### 地址参数（Path Variable）
+| 参数名称 | 默认值 | 描述 |
+| ------ | ------ | ------ |
+|id||id|
+### 请求参数(Query Param)
+| 参数名称 | 默认值 | 描述 |
+| ------ | ------ | ------ |
+|username||username|
+### 响应体
+● 200 响应数据格式：JSON
+| 参数名称 | 类型 | 默认值 | 不为空 | 描述 |
+| ------ | ------ | ------ | ------ | ------ |
+| code|int32||false||
+| data|string||false||
+| message|string||false||
+
+##### 接口描述
+> 
+
+
+
+
 ## 4	Bms Tag Controll
 
 ## 4.1	getPostsByTag
@@ -161,9 +186,77 @@
 
 
 
-## 7	Bms Tip Controll
+## 7	Collect Controll
 
-## 7.1	getRandomTip
+## 7.1	cancelCollect
+
+> GET  /collect/cancel
+### 请求参数(Query Param)
+| 参数名称 | 默认值 | 描述 |
+| ------ | ------ | ------ |
+|postId||postId|
+|userName||userName|
+### 响应体
+● 200 响应数据格式：JSON
+| 参数名称 | 类型 | 默认值 | 不为空 | 描述 |
+| ------ | ------ | ------ | ------ | ------ |
+| code|int32||false||
+| data|object||false||
+| message|string||false||
+
+##### 接口描述
+> 
+
+
+
+
+## 7.2	isCollected
+
+> GET  /collect/isCollected
+### 请求参数(Query Param)
+| 参数名称 | 默认值 | 描述 |
+| ------ | ------ | ------ |
+|postId||postId|
+|userName||userName|
+### 响应体
+● 200 响应数据格式：JSON
+| 参数名称 | 类型 | 默认值 | 不为空 | 描述 |
+| ------ | ------ | ------ | ------ | ------ |
+| code|int32||false||
+| data|object||false||
+| message|string||false||
+
+##### 接口描述
+> 
+
+
+
+
+## 7.3	setCollect
+
+> GET  /collect/set
+### 请求参数(Query Param)
+| 参数名称 | 默认值 | 描述 |
+| ------ | ------ | ------ |
+|postId||postId|
+|userName||userName|
+### 响应体
+● 200 响应数据格式：JSON
+| 参数名称 | 类型 | 默认值 | 不为空 | 描述 |
+| ------ | ------ | ------ | ------ | ------ |
+| code|int32||false||
+| data|object||false||
+| message|string||false||
+
+##### 接口描述
+> 
+
+
+
+
+## 8	Bms Tip Controll
+
+## 8.1	getRandomTip
 
 > GET  /tip/daily
 ### 响应体
@@ -184,9 +277,9 @@
 
 
 
-## 8	Bms Follow Contr
+## 9	Bms Follow Contr
 
-## 8.1	getFans
+## 9.1	getFans
 
 > GET  /follow/fans/{id}
 ### 地址参数（Path Variable）
@@ -218,7 +311,7 @@
 
 
 
-## 8.2	getFollowers
+## 9.2	getFollowers
 
 > GET  /follow/followers/{id}
 ### 地址参数（Path Variable）
@@ -250,7 +343,7 @@
 
 
 
-## 8.3	handleFollow
+## 9.3	handleFollow
 
 > GET  /follow/subscribe/{userId}
 ### 地址参数（Path Variable）
@@ -275,7 +368,7 @@
 
 
 
-## 8.4	handleUnFollow
+## 9.4	handleUnFollow
 
 > GET  /follow/unsubscribe/{userId}
 ### 地址参数（Path Variable）
@@ -300,7 +393,7 @@
 
 
 
-## 8.5	isFollow
+## 9.5	isFollow
 
 > GET  /follow/validate/{postUserId}
 ### 地址参数（Path Variable）
@@ -325,9 +418,9 @@
 
 
 
-## 9	Ums User Control
+## 10	Ums User Control
 
-## 9.1	getUser
+## 10.1	getUser
 
 > GET  /user/info
 ### 请求头
@@ -364,7 +457,7 @@
 
 
 
-## 9.2	login
+## 10.2	login
 
 > POST  /user/login
 ### 请求体(Request Body)
@@ -387,7 +480,7 @@
 
 
 
-## 9.3	logOut
+## 10.3	logOut
 
 > GET  /user/logout
 ### 响应体
@@ -404,7 +497,7 @@
 
 
 
-## 9.4	getProfile
+## 10.4	getProfile
 
 > GET  /user/profile
 ### 请求参数(Query Param)
@@ -435,7 +528,7 @@
 
 
 
-## 9.5	register
+## 10.5	register
 
 > POST  /user/register
 ### 请求体(Request Body)
@@ -459,7 +552,7 @@
 
 
 
-## 9.6	updateUser
+## 10.6	updateUser
 
 > POST  /user/update
 ### 请求体(Request Body)
@@ -511,7 +604,7 @@
 
 
 
-## 9.7	updateAvatar
+## 10.7	updateAvatar
 
 > GET  /user/updateAvatar
 ### 请求参数(Query Param)
@@ -533,7 +626,7 @@
 
 
 
-## 9.8	updateAvatar
+## 10.8	updateAvatar
 
 > POST  /user/uploadAvatar
 ### 请求参数(Query Param)
@@ -553,7 +646,7 @@
 
 
 
-## 9.9	getUserByName
+## 10.9	getUserByName
 
 > GET  /user/{username}
 ### 地址参数（Path Variable）
@@ -579,9 +672,9 @@
 
 
 
-## 10	Bms Post Control
+## 11	Bms Post Control
 
-## 10.1	view
+## 11.1	view
 
 > GET  /post
 ### 请求参数(Query Param)
@@ -602,7 +695,7 @@
 
 
 
-## 10.2	delete
+## 11.2	delete
 
 > DELETE  /post/delete/{id}
 ### 地址参数（Path Variable）
@@ -627,7 +720,7 @@
 
 
 
-## 10.3	getMyPost
+## 11.3	getMyPost
 
 > GET  /post/getMyPosts/{id}
 ### 地址参数（Path Variable）
@@ -667,7 +760,7 @@
 
 
 
-## 10.4	list
+## 11.4	list
 
 > GET  /post/list
 ### 请求参数(Query Param)
@@ -721,7 +814,7 @@
 
 
 
-## 10.5	getRecommend
+## 11.5	getRecommend
 
 > GET  /post/recommend
 ### 请求参数(Query Param)
@@ -756,7 +849,7 @@
 
 
 
-## 10.6	release
+## 11.6	release
 
 > POST  /post/release
 ### 请求参数(Query Param)
@@ -799,7 +892,7 @@
 
 
 
-## 10.7	update
+## 11.7	update
 
 > POST  /post/update
 ### 请求头
@@ -851,7 +944,7 @@
 
 
 
-## 10.8	uploadCover
+## 11.8	uploadCover
 
 > POST  /post/uploadCover
 ### 请求参数(Query Param)
@@ -871,9 +964,9 @@
 
 
 
-## 11	Search Controlle
+## 12	Search Controlle
 
-## 11.1	searchList
+## 12.1	searchList
 
 > GET  /search
 ### 请求参数(Query Param)
@@ -927,9 +1020,9 @@
 
 
 
-## 12	Email Controller
+## 13	Email Controller
 
-## 12.1	getVerifiedCode
+## 13.1	getVerifiedCode
 
 > GET  /getCode
 ### 请求参数(Query Param)
@@ -950,7 +1043,7 @@
 
 
 
-## 12.2	getVerifiedCode
+## 13.2	getVerifiedCode
 
 > POST  /getCode
 ### 请求参数(Query Param)
@@ -971,7 +1064,7 @@
 
 
 
-## 12.3	getVerifiedCode
+## 13.3	getVerifiedCode
 
 > DELETE  /getCode
 ### 请求参数(Query Param)
@@ -992,7 +1085,7 @@
 
 
 
-## 12.4	getVerifiedCode
+## 13.4	getVerifiedCode
 
 > PUT  /getCode
 ### 请求参数(Query Param)
@@ -1013,7 +1106,7 @@
 
 
 
-## 12.5	getVerifiedCode
+## 13.5	getVerifiedCode
 
 > PATCH  /getCode
 ### 请求参数(Query Param)
@@ -1034,7 +1127,7 @@
 
 
 
-## 12.6	getVerifiedCode
+## 13.6	getVerifiedCode
 
 > OPTIONS  /getCode
 ### 请求参数(Query Param)
@@ -1055,7 +1148,7 @@
 
 
 
-## 12.7	getVerifiedCode
+## 13.7	getVerifiedCode
 
 > HEAD  /getCode
 ### 请求参数(Query Param)
